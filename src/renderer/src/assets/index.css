@@ -16,3 +16,15 @@ body {
   @apply font-mono antialiased  text-white;
   @apply overflow-hidden;
 }
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#6b7280] rounded-md;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent
+}

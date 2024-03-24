@@ -22,12 +22,15 @@
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
-    "@electron-toolkit/utils": "^3.0.0"
+    "@electron-toolkit/utils": "^3.0.0",
+    "fs-extra": "^11.2.0"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
     "@electron-toolkit/eslint-config-ts": "^1.0.1",
     "@electron-toolkit/tsconfig": "^1.0.1",
+    "@mdxeditor/editor": "^2.16.0",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^18.19.9",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
@@ -39,6 +42,8 @@
     "electron-vite": "^2.0.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
+    "jotai": "^2.7.1",
+    "lodash": "^4.17.21",
     "postcss": "^8.4.35",
     "prettier": "^3.2.4",
     "react": "^18.2.0",

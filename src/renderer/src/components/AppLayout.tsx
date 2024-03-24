@@ -1,6 +1,6 @@
 import { ComponentProps, forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
-import {VscFiles} from "react-icons/vsc"
+import { VscFiles } from 'react-icons/vsc'
 export const RootLayout = ({ children, className, ...props }: ComponentProps<'main'>) => {
   return (
     <main className={twMerge('flex flex-row h-screen bg-zinc-700', className)} {...props}>
@@ -11,11 +11,7 @@ export const RootLayout = ({ children, className, ...props }: ComponentProps<'ma
 
 export const Sidebar = ({ className, children, ...props }: ComponentProps<'aside'>) => {
   return (
-    <aside
-      className={twMerge('w-[250px] pl-[52px] h-[100vh + 10px] overflow-auto', className)}
-      {...props}
-    >
-      <div className="w-[50px] h-[100vh] pt-2  bg-zinc-800 fixed top-0 left-0 justify-center items-center m-auto"><VscFiles className="m-auto text-lg cursor-pointer" /></div>
+    <aside className={twMerge('w-[350px] h-[100vh + 10px] overflow-auto', className)} {...props}>
       {children}
     </aside>
   )
