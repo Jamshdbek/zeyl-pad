@@ -1,4 +1,3 @@
-// import { noteMock } from '@renderer/store'
 import { useNoteList } from '@renderer/hooks/useNoteList'
 import { NotePreview } from './NotePreview'
 import { isEmpty } from 'lodash'
@@ -16,8 +15,6 @@ export const NotePreviewList = ({ onSelect }) => {
       {' '}
       {notes.map((note, index) => (
         <NotePreview
-          // title={note.title}
-          // lastEditTime={note.lastEditTime}
           key={note.title + note.lastEditTime}
           isActive={selectedNoteIndex === index}
           className=" cursor-pointer"

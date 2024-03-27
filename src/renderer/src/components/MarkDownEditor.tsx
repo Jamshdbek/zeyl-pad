@@ -3,16 +3,21 @@ import {
   headingsPlugin,
   listsPlugin,
   markdownShortcutPlugin,
-  quotePlugin
+  quotePlugin,
 } from '@mdxeditor/editor'
 import { useMarkDownEditor } from '@renderer/hooks/markDownEditor'
 function MarkDownEditor() {
-  const { selectedNote , editorRef, handleAutoSave , handleBlur} = useMarkDownEditor()
+  const { selectedNote, editorRef, handleAutoSave, handleBlur } = useMarkDownEditor()
   if (selectedNote == null) {
-    return <div className='w-full text-center m-auto opacity-[0.5] items-center min-h-[100vh]'>no note selected</div>
+    return (
+      <div className="w-full text-center m-auto opacity-[0.5] items-center min-h-[100vh]">
+        no note selected
+      </div>
+    )
   }
   return (
     <MDXEditor
+      className="dark-theme dark-editor"
       key={selectedNote.title}
       ref={editorRef}
       onChange={handleAutoSave}

@@ -23,6 +23,7 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
+    "@pdftron/webviewer": "^10.8.0",
     "fs-extra": "^11.2.0"
   },
   "devDependencies": {

@@ -8,7 +8,7 @@ export const NewNoteBUtton = () => {
     await createEmptyNote()
   }
   return (
-    <ActionButton onClick={handleCreate} className=" m-2 flex items-center gap-1">
+    <ActionButton onClick={handleCreate} className="w-full p-2 text-center justify-center  flex items-center gap-1">
        <VscAdd />
     </ActionButton>
   )
