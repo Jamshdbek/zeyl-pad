@@ -39,7 +39,6 @@ export const selectedNoteAtomAsync = atom(async (get) => {
   } else {
     const selectedNote = notes[selectedNoteIndex]
     const noteContent = await window.context.readNote(selectedNote.title)
-    const date = formatDateFromMs(selectedNote.lastEditTime)
     return {
       ...selectedNote,
       content: noteContent
@@ -80,12 +79,12 @@ export const saveNoteAtom = atom(null, async (get, set, newContent: NoteContent)
   )
 })
 
-export const createNote = atom(null, async (get, set) => {
+export const createNote = atom(null, async (get, set, fileName: string) => {
   const notes = get(notesAtom)
 
   if (!notes) return
 
-  const title = await window.context.createNote()
+  const title = await window.context.createNote(fileName)
 
   if (!title) return
 

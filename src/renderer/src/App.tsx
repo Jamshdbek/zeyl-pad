@@ -1,7 +1,7 @@
 import { Content, NewNoteBUtton, RootLayout, Sidebar } from '@/components'
 import { NotePreviewList } from '@renderer/components/Notes/NotePreviewList'
 import MarkDownEditor from '@/components/MarkDownEditor'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 
 function App() {
   const minDrawerWidth = 50
@@ -17,7 +17,7 @@ function App() {
     }
   }
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = () => {
     document.addEventListener('mouseup', handleMouseUp, true)
     document.addEventListener('mousemove', handleMouseMove, true)
   }
@@ -33,10 +33,11 @@ function App() {
       setWidth(newWidth)
     }
   }, [])
+  // width={width}
   return (
     <RootLayout>
-      <Sidebar ref={sidebarRef} width={width} onMouseDown={(e:Event) => e.preventDefault()}>
-        <NewNoteBUtton />
+      <NewNoteBUtton />
+      <Sidebar ref={sidebarRef} width={width}>
         <NotePreviewList onSelect={resetScroll} />
       </Sidebar>
       <div

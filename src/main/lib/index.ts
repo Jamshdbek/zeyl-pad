@@ -1,13 +1,13 @@
-import { appDirectory, fileEncoding } from '@shared/constats'
+import { fileEncoding } from '@shared/constats'
 import { NoteInfo } from '@shared/models'
 import { CreateNote, GetNotes, ReadNote, WriteNote } from '@shared/types'
-import { ensureDir, readFile, readdir, stat, writeFile, writeFileSync } from 'fs-extra'
+import { ensureDir, readFile, readdir, stat, writeFile } from 'fs-extra'
 import { homedir } from 'os'
-import fs from 'fs-extra'
-import { dialog } from 'electron'
 import path from 'path'
+import { atom } from 'jotai'
+export const selectedNoteIndexAtom = atom<number | null>(null)
+console.log(selectedNoteIndexAtom, 'index')
 export const getRootDirectory = () => {
-  // return `${homedir}/${appDirectory}`
   // return `${homedir}/${appDirectory}`
   const homeDir = homedir()
   return path.join(homeDir, 'zeylipad')
@@ -58,28 +58,28 @@ export const writeNote: WriteNote = async (filename, content) => {
   return writeFile(`${rootDir}/${filename}.md`, content, { encoding: fileEncoding })
 }
 
-export const createNote: CreateNote | any = async () => {
+export const createNote: CreateNote | any = async (fileName: string) => {
   const rootDir = getRootDirectory()
   await ensureDir(rootDir)
 
-  const { filePath, canceled } = await dialog.showSaveDialog({
-    title: 'New note',
-    defaultPath: `${rootDir}/Untitled.md`,
-    buttonLabel: 'Create',
-    properties: ['showOverwriteConfirmation'],
-    showsTagField: false,
-    filters: [{ name: 'Markdown', extensions: ['md'] }]
-  })
+  // const { filePath, canceled } = await dialog.showSaveDialog({
+  //   title: 'New note',
+  //   defaultPath: `${rootDir}/Untitled.md`,
+  //   buttonLabel: 'Create',
+  //   properties: ['showOverwriteConfirmation'],
+  //   showsTagField: false,
+  //   filters: [{ name: 'Markdown', extensions: ['md'] }]
+  // })
 
-  if (canceled || !filePath) {
-    console.info('Note creation canceled')
-    return false
-  }
+  // if (canceled || !filePath) {
+  //   console.info('Note creation canceled')
+  //   return false
+  // }
 
-  const { name: filename } = path.parse(filePath)
+  const { name: filename } = path.parse(`${rootDir}/${fileName}.md`)
 
-  console.info(`Creating note: ${filePath}`)
-  await writeFile(filePath, '')
+  console.info(`Creating note: ${`${rootDir}/${fileName}.md`}`)
+  await writeFile(`${rootDir}/${fileName}.md`, '')
 
   return filename
 }

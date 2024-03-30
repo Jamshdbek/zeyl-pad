@@ -1,4 +1,3 @@
-import { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 export const ActionButton = ({ className, children, onClick }: any) => {

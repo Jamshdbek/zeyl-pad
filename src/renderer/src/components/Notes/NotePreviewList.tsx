@@ -12,7 +12,6 @@ export const NotePreviewList = ({ onSelect }) => {
     )
   return (
     <ul className="px-2">
-      {' '}
       {notes.map((note, index) => (
         <NotePreview
           key={note.title + note.lastEditTime}
