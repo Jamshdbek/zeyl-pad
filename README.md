@@ -1,4 +1,5 @@
-# quick-note
+# zeyl-pad
+
 
 An Electron application with React and TypeScript
 
