@@ -15,5 +15,5 @@ try {
     createNote: (...args: Parameters<CreateNote>) => ipcRenderer.invoke('createNote', ...args)
   })
 } catch (error) {
-  console.log(error)
+  console.error(error)
 }

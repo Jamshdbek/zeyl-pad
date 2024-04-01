@@ -20,11 +20,11 @@ body {
   @apply font-mono antialiased  text-white;
   @apply overflow-hidden;
 
-  color-scheme: dark;
+  color-scheme: red;
 }
 
 ::-webkit-scrollbar {
-  @apply w-2;
+  @apply w-1;
 }
 
 ::-webkit-scrollbar-thumb {

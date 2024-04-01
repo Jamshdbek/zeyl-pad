@@ -33,11 +33,10 @@ function App() {
       setWidth(newWidth)
     }
   }, [])
-  // width={width}
   return (
     <RootLayout>
-      <NewNoteBUtton />
-      <Sidebar ref={sidebarRef} width={width}>
+        <NewNoteBUtton width={width}/>
+      <Sidebar width={width}>
         <NotePreviewList onSelect={resetScroll} />
       </Sidebar>
       <div

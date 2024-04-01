@@ -6,9 +6,7 @@ import { homedir } from 'os'
 import path from 'path'
 import { atom } from 'jotai'
 export const selectedNoteIndexAtom = atom<number | null>(null)
-console.log(selectedNoteIndexAtom, 'index')
 export const getRootDirectory = () => {
-  // return `${homedir}/${appDirectory}`
   const homeDir = homedir()
   return path.join(homeDir, 'zeylipad')
 }
@@ -24,17 +22,6 @@ export const getNotes: GetNotes | any = async () => {
   })
 
   const notes = notesFileNames.filter((fileName) => fileName.endsWith('.md'))
-
-  // if (isEmpty(notes)) {
-  //   console.info('No notes found, creating a welcome note')
-
-  //   const content = await readFile(welcomeNoteFilename, { encoding: fileEncoding })
-
-  //   // create the welcome note
-  //   await writeFile(`${rootDir}/${welcomeNoteFilename}`, content, { encoding: fileEncoding })
-
-  //   notes.push(welcomeNoteFilename)
-  // }
 
   return Promise.all(notes.map(getNoteInfoFromFilename))
 }
