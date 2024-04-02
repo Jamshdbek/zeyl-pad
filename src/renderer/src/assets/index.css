@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------------------------------------
- *  Copyright (c) Electron Jamshid compotation Corporation. All rights reserved.
+ *  Copyright (c) Electron Vbrand compotation Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 @tailwind base;
@@ -20,7 +20,7 @@ body {
   @apply font-mono antialiased  text-white;
   @apply overflow-hidden;
 
-  color-scheme: red;
+  color-scheme: dark;
 }
 
 ::-webkit-scrollbar {
