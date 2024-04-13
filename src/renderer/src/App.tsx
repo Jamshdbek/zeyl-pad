@@ -1,5 +1,5 @@
 import { Content, NewNoteBUtton, RootLayout, Sidebar } from '@/components'
-import { NotePreviewList } from '@renderer/components/Notes/NotePreviewList'
+import { NotePreviewList } from '@renderer/components/NoteList/NotePreviewList'
 import MarkDownEditor from '@/components/MarkDownEditor'
 import { useCallback, useRef, useState } from 'react'
 
