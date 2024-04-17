@@ -9,21 +9,6 @@
  modern 😎  design 💎  notepad 📝
 </p>
 
-<!-- <p align="center">
-<a href="https://www.npmjs.com/package/unocss"><img src="https://img.shields.io/npm/v/unocss?color=c95f8b&amp;label=" alt="NPM version"></a></p>
-
-<blockquote align="center">
-<p>💡 I highly recommend reading this blog post - <br><a href="https://antfu.me/posts/reimagine-atomic-css"><strong>Reimagine Atomic CSS</strong></a><br>for the story behind</p>
-</blockquote> -->
-
-<br>
-<p align="center">
-<!-- <a href="https://unocss.dev/">📚 Documentation</a> |
-<a href="https://unocss.dev/interactive/">🧑‍💻 Interactive Docs</a> |
-<a href="https://unocss.dev/play/">🤹‍♂️ Playground</a> -->
-</p>
-<br>
-
 
 ## Recommended IDE Setup
 
