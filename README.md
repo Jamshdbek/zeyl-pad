@@ -1,20 +1,20 @@
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/unocss/unocss/main/playground/public/icon-gray.svg" style="width:100px;" />
+<img src="https://i.ibb.co/VvKCQDB/icon.png" style="width:100px;" />
 </p>
 
-<h1 align="center">UnoCSS</h1>
+<h1 align="center">ZeylPad</h1>
 
 <p align="center">
-The instant on-demand Atomic CSS engine.
+ modern design notepad
 </p>
 
-<p align="center">
+<!-- <p align="center">
 <a href="https://www.npmjs.com/package/unocss"><img src="https://img.shields.io/npm/v/unocss?color=c95f8b&amp;label=" alt="NPM version"></a></p>
 
 <blockquote align="center">
 <p>💡 I highly recommend reading this blog post - <br><a href="https://antfu.me/posts/reimagine-atomic-css"><strong>Reimagine Atomic CSS</strong></a><br>for the story behind</p>
-</blockquote>
+</blockquote> -->
 
 <br>
 <p align="center">

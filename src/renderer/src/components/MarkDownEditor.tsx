@@ -9,6 +9,7 @@ import {
   thematicBreakPlugin
 } from '@mdxeditor/editor'
 import { useMarkDownEditor } from '@renderer/hooks/markDownEditor'
+import Quill from 'quill'
 function MarkDownEditor() {
   const { selectedNote, editorRef, handleAutoSave, handleBlur } = useMarkDownEditor()
   if (selectedNote == null) {
@@ -18,10 +19,13 @@ function MarkDownEditor() {
       </div>
     )
   }
+  const quill = new Quill('#editor', {
+    theme: 'snow'
+  })
 
   return (
     <>
-      <MDXEditor
+      {/* <MDXEditor
         className="dark-theme dark-editor"
         key={selectedNote.title}
         ref={editorRef}
@@ -38,7 +42,7 @@ function MarkDownEditor() {
           tablePlugin()
         ]}
         contentEditableClassName=" outline-none min-h-screen max-x-none text-lg px-8 py-5 caret-wite-500 prose-invert prose-headings:text-white  "
-      />
+      /> */}
     </>
   )
 }
