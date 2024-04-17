@@ -18,9 +18,9 @@
 
 <br>
 <p align="center">
-<a href="https://unocss.dev/">📚 Documentation</a> |
+<!-- <a href="https://unocss.dev/">📚 Documentation</a> |
 <a href="https://unocss.dev/interactive/">🧑‍💻 Interactive Docs</a> |
-<a href="https://unocss.dev/play/">🤹‍♂️ Playground</a>
+<a href="https://unocss.dev/play/">🤹‍♂️ Playground</a> -->
 </p>
 <br>
 
