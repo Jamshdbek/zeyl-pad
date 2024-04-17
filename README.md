@@ -6,7 +6,7 @@
 <h1 align="center">ZeylPad</h1>
 
 <p align="center">
- modern 😎 && design 💎 && notepad 📝
+ modern 😎  design 💎  notepad 📝
 </p>
 
 <!-- <p align="center">
