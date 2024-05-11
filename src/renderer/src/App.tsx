@@ -1,8 +1,8 @@
-import { Content, NewNoteBUtton, RootLayout, Sidebar } from '@/components'
+import { Content, Header, NewNoteBUtton, RootLayout, Sidebar, ToolBarView } from '@/components'
 import { NotePreviewList } from '@renderer/components/Notes/NotePreviewList'
 import MarkDownEditor from '@/components/MarkDownEditor'
-import { useCallback, useEffect, useRef, useState } from 'react'
-
+import { useCallback, useRef, useState } from 'react'
+import '@mdxeditor/editor/style.css'
 function App() {
   const minDrawerWidth = 50
   const maxDrawerWidth = 1000
@@ -34,20 +34,24 @@ function App() {
     }
   }, [])
   return (
-    <RootLayout>
-      <Sidebar ref={sidebarRef} width={width} onMouseDown={(e:Event) => e.preventDefault()}>
-        <NewNoteBUtton />
-        <NotePreviewList onSelect={resetScroll} />
-      </Sidebar>
-      <div
-        className="w-[1px] hover:w-1 cursor-col-resize  bg-zinc-600"
-        ref={resizerRef}
-        onMouseDown={handleMouseDown}
-      />
-      <Content className=" border-l bg-zinc-900/50 border-l-white/20 " ref={contentRef}>
-        <MarkDownEditor />
-      </Content>
-    </RootLayout>
+    <>
+      <Header />
+      <RootLayout>
+        <Sidebar ref={sidebarRef} width={width} onMouseDown={(e: Event) => e.preventDefault()}>
+          <NewNoteBUtton />
+          <NotePreviewList onSelect={resetScroll} />
+        </Sidebar>
+        <div
+          className="w-[2px]  hover:block   cursor-col-resize  bg-zinc-600"
+          ref={resizerRef}
+          onMouseDown={handleMouseDown}
+        />
+        <Content className=" border-l bg-zinc-900/50 border-l-white/20 " ref={contentRef}>
+          <MarkDownEditor />
+        </Content>
+        <ToolBarView />
+      </RootLayout>
+    </>
   )
 }
 

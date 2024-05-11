@@ -8,18 +8,23 @@ import { CreateNote, ReadNote, WriteNote } from '@shared/types'
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 900,
-    height: 670,
-    show: false,
+    width: 1200,
+    height: 720,
+    minHeight: 540,
+    titleBarStyle: 'hidden',
+    backgroundColor: 'black',
     // icon: icon,
-    autoHideMenuBar: true,
     // ...(process.platform === 'linux' ? { icon } : {}),
+    titleBarOverlay: {
+      symbolColor: '#DADBE1',
+      color: '#151515',
+      height: 20
+    },
     center: true,
     title: '',
-    // frame: false,
-    // vibrancy: 'under-window',
-    // visualEffectState: 'active',
-    // titleBarStyle: 'hidden',
+    frame: false,
+    vibrancy: 'under-window',
+    visualEffectState: 'active',
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,

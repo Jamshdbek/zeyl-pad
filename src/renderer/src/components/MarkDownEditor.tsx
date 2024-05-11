@@ -1,9 +1,16 @@
 import {
+  BoldItalicUnderlineToggles,
+  Button,
+  DialogButton,
+  InsertImage,
   MDXEditor,
+  UndoRedo,
   headingsPlugin,
+  imagePlugin,
   listsPlugin,
   markdownShortcutPlugin,
   quotePlugin,
+  toolbarPlugin
 } from '@mdxeditor/editor'
 import { useMarkDownEditor } from '@renderer/hooks/markDownEditor'
 function MarkDownEditor() {
@@ -23,7 +30,28 @@ function MarkDownEditor() {
       onChange={handleAutoSave}
       onBlur={handleBlur}
       markdown={selectedNote.content}
-      plugins={[headingsPlugin(), listsPlugin(), quotePlugin(), markdownShortcutPlugin()]}
+      plugins={[
+        headingsPlugin(),
+        listsPlugin(),
+        quotePlugin(),
+        markdownShortcutPlugin(),
+        imagePlugin({
+          imageUploadHandler: () => {
+            return Promise.resolve('D:/')
+          },
+          imageAutocompleteSuggestions: ['D:/', 'D/:']
+        }),
+        toolbarPlugin({
+          toolbarContents: () => (
+            <>
+              <UndoRedo />
+              <BoldItalicUnderlineToggles />
+              <Button />
+              <InsertImage />
+            </>
+          )
+        })
+      ]}
       contentEditableClassName=" outline-none min-h-screen max-x-none text-lg px-8 py-5 caret-wite-500 prose-invert prose-headings:text-white  "
     />
   )
