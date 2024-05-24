@@ -1,9 +1,9 @@
 {
   "name": "quick-note",
-  "version": "1.0.0",
+  "version": "1.6.2",
   "description": "An Electron application with React and TypeScript",
   "main": "./out/main/index.js",
-  "author": "example.com",
+  "author": "jamshid Ibrokhimov <https://github.com/jamshidibrokhimov>",
   "homepage": "https://electron-vite.org",
   "scripts": {
     "format": "prettier --write .",

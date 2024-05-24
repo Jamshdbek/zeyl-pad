@@ -9,7 +9,7 @@ export const NewNoteBUtton = () => {
   }
   return (
     <ActionButton onClick={handleCreate} className="w-full p-2 text-center justify-center  flex items-center gap-1">
-       <VscAdd />
+       <VscAdd /> <p>Adding Note</p>
     </ActionButton>
   )
 }

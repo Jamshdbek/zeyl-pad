@@ -3,7 +3,6 @@ import { NoteInfo } from '@shared/models'
 import { CreateNote, GetNotes, ReadNote, WriteNote } from '@shared/types'
 import { ensureDir, readFile, readdir, stat, writeFile } from 'fs-extra'
 import { homedir } from 'os'
-import fs from 'fs-extra'
 import { dialog } from 'electron'
 import path from 'path'
 export const getRootDirectory = () => {

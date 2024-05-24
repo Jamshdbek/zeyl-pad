@@ -17,7 +17,7 @@ function App() {
     }
   }
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = () => {
     document.addEventListener('mouseup', handleMouseUp, true)
     document.addEventListener('mousemove', handleMouseMove, true)
   }
@@ -27,7 +27,7 @@ function App() {
     document.removeEventListener('mousemove', handleMouseMove, true)
   }
 
-  const handleMouseMove = useCallback((e) => {
+  const handleMouseMove = useCallback((e:any) => {
     const newWidth = e.clientX - document.body.offsetLeft
     if (newWidth > minDrawerWidth && newWidth < maxDrawerWidth) {
       setWidth(newWidth)
