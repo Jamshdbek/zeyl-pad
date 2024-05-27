@@ -26,7 +26,8 @@
     "@pdftron/webviewer": "^10.8.0",
     "@vanilla-extract/css": "^1.15.1",
     "@vanilla-extract/recipes": "^0.5.2",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.2.0",
+    "marked": "^12.0.2"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",

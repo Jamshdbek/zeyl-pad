@@ -12,7 +12,7 @@ export const Sidebar = ({ className, children, width, ...props }: any) => {
   return (
     <aside
       style={{ width: `${width / 16}rem` }}
-      className={twMerge('w-[350px] pt-3 px-2 h-[100vh + 10px] hover:overflow-auto overflow-hidden', className)}
+      className={twMerge('w-[350px] pt-3 px-2 h-[100vh + 10px] hover:overflow-auto overflow-hidden font-mono text-sm  text-[#C3CACE] ', className)}
       {...props}
     >
       {children}

@@ -1,18 +1,18 @@
 import {
+  BlockTypeSelect,
   BoldItalicUnderlineToggles,
   Button,
-  DialogButton,
-  InsertImage,
   MDXEditor,
   UndoRedo,
   headingsPlugin,
-  imagePlugin,
   listsPlugin,
   markdownShortcutPlugin,
   quotePlugin,
   toolbarPlugin
 } from '@mdxeditor/editor'
-import { useMarkDownEditor } from '@renderer/hooks/markDownEditor'
+import { useMarkDownEditor } from '@renderer/hooks/markDownEditor';
+import img from "@/assets/backround.jpg"
+import long from "@/assets/long.jpg"
 function MarkDownEditor() {
   const { selectedNote, editorRef, handleAutoSave, handleBlur } = useMarkDownEditor()
   if (selectedNote == null) {
@@ -23,6 +23,9 @@ function MarkDownEditor() {
     )
   }
   return (
+    <div>
+      <img src={long} alt="phhto" className=' absolute  bg-transparent  ' />
+      <div   className='w-full absolute blur-[20px]'/>
     <MDXEditor
       className="dark-theme dark-editor"
       key={selectedNote.title}
@@ -35,25 +38,20 @@ function MarkDownEditor() {
         listsPlugin(),
         quotePlugin(),
         markdownShortcutPlugin(),
-        imagePlugin({
-          imageUploadHandler: () => {
-            return Promise.resolve('D:/')
-          },
-          imageAutocompleteSuggestions: ['D:/', 'D/:']
-        }),
         toolbarPlugin({
           toolbarContents: () => (
             <>
               <UndoRedo />
               <BoldItalicUnderlineToggles />
               <Button />
-              <InsertImage />
+              <BlockTypeSelect/>
             </>
           )
         })
       ]}
-      contentEditableClassName=" outline-none min-h-screen max-x-none text-lg px-8 py-5 caret-wite-500 prose-invert prose-headings:text-white  "
-    />
+      contentEditableClassName="z-20 w-full outline-none min-h-screen max-x-none text-lg px-8 py-5 caret-wite-500 prose-invert prose-headings:text-white  "
+      />
+  </div>
   )
 }
 

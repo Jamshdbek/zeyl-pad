@@ -34,3 +34,25 @@ body {
 ::-webkit-scrollbar-track {
   @apply bg-transparent;
 }
+
+.custom-toolbar {
+  display: flex;
+  background-color:black;
+  position: relative;
+  gap: 10px;
+  overflow: hidden;
+  top: 0;
+  padding: 0;
+  margin: 0%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.custom-toolbar > * {
+  color: red;
+  position: relative;
+  /* margin: 0 5px; */
+  width: 10px;
+
+}
