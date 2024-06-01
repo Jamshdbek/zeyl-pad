@@ -65,7 +65,6 @@ export const createNote: CreateNote | any = async (fileName: string) => {
 
   const { name: filename } = path.parse(`${rootDir}/${fileName}.md`)
 
-  console.info(`Creating note: ${`${rootDir}/${fileName}.md`}`)
   await writeFile(`${rootDir}/${fileName}.md`, '')
 
   return filename

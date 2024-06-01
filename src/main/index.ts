@@ -1,10 +1,8 @@
 import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
-// import icon from '../../resources/icon.png?asset'
 import { createNote, getNotes, readNote, writeNote } from './lib'
 import { CreateNote, ReadNote, WriteNote } from '@shared/types'
-// import icon from "@/resources/icon.png"
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
